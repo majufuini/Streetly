@@ -1,0 +1,29 @@
+body {
+    background-color: rgb(255, 232, 247);
+}
+header {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#barrapesquisa {
+    margin-left: 70%;
+}
+
+.produto {
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    width: 200px;
+    padding: 20px;
+    
+}
+
+#catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 15px;
+    margin-top: 30px;
+}
