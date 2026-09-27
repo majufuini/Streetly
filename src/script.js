@@ -8,7 +8,7 @@ const produtos = [
     {
         nome: "Calça Serena",
         categoria: "Calças",
-        descricao: "Calça de cintura alta com corte reto, confortável e versátil, ideal para combinar com diferentes tipos de blusas e calçados.",
+        descricao: "Calça de cintura alta com corte reto, confortável e versátil.",
         preco: "R$ 119,90",
     },
     {
@@ -41,4 +41,39 @@ produtos.forEach(produto => {
         <p>${produto.descricao}</p>
         <p>${produto.preco}</p>
     </div>`
+});
+
+function buscarProduto() {
+    let pesquisa = document.getElementById("pesquisa").value.toLowerCase();
+
+    let resultados = produtos.filter(produto =>
+        produto.nome.toLowerCase().includes(pesquisa) ||
+        produto.categoria.toLowerCase().includes(pesquisa) ||
+        produto.descricao.toLowerCase().includes(pesquisa)
+    );
+
+    const catalogo = document.getElementById("catalogo");
+
+    catalogo.innerHTML = "";
+
+    resultados.forEach(produto => {
+        catalogo.innerHTML += `
+        <div class="produto">
+            <h3>${produto.nome}</h3>
+            <p>${produto.categoria}</p>
+            <p>${produto.descricao}</p>
+            <p>${produto.preco}</p>
+        </div>
+        `;
+    });
+}
+
+const pesquisa = document.getElementById("pesquisa");
+
+pesquisa.addEventListener("keydown", function(event) {
+
+    if (event.key === "Enter") {
+        buscarProduto();
+    }
+
 });
