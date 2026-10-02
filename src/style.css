@@ -7,8 +7,17 @@ header {
 
 }
 
-#barrapesquisa {
+#pesquisa {
     margin-left: 70%;
+    width: 400px;
+    height: 40px;
+    padding: 0 15px;
+
+    border: 1px solid #ddd;
+    border-radius: 20px;
+
+    outline: none;
+    background-color: white;
 }
 
 .produto {
@@ -23,7 +32,65 @@ header {
 #catalogo {
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;body {
+    background-color: rgb(255, 232, 247);
+}
+
+header {
+    height: 80px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+#marcadagua {
+    margin-left: 20px;
+}
+
+#barrapesquisa {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 400px;
+    height: 40px;
+    padding: 0 15px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.produto {
+    color: black;
+    background-color: white;
+    border-radius: 20px;
+    width: 200px;
+    padding: 20px;
+
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.produto:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+#catalogo {
+    display: flex;
+    flex-wrap: wrap;
     gap: 30px;
     margin-left: 15px;
     margin-top: 30px;
+}
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.produto img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
 }
